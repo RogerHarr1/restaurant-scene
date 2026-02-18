@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS restaurant_enrichment (
 	newsletter_form_html TEXT,
 	newsletter_provider TEXT,
 	newsletter_direct_endpoint TEXT,
+	newsletter_extracted_params TEXT,
 	enriched_at TEXT NOT NULL,
 	updated_at TEXT NOT NULL
 );

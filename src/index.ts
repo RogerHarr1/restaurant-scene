@@ -2,6 +2,7 @@ import type { SubscribeItem } from './types';
 import { json, safeAsync } from './utils';
 import { initSchema, importRestaurants, getRestaurantsToEnrich, getRestaurantsWithEnrichment } from './db';
 import { enrichRestaurant } from './enrich';
+import { detectNewsletterProvider } from './providers';
 import { handleSubscribeBatch } from './subscribe';
 
 export interface AppEnv {
@@ -18,6 +19,48 @@ export default {
 		// GET /health — simple health check
 		if (url.pathname === '/health') {
 			return json({ status: 'ok' });
+		}
+
+		// GET /api/debug-detect — temporary diagnostic: fetch a URL and run detection
+		if (request.method === 'GET' && url.pathname === '/api/debug-detect') {
+			const targetUrl = url.searchParams.get('url');
+			if (!targetUrl) {
+				return json({ error: 'Missing ?url= query parameter' }, 400);
+			}
+
+			const [res, fetchErr] = await safeAsync(() =>
+				fetch(targetUrl, {
+					headers: {
+						'User-Agent': 'Mozilla/5.0 (compatible; RestaurantScene/1.0)',
+						Accept: 'text/html',
+					},
+					redirect: 'follow',
+				})
+			);
+
+			if (fetchErr || !res || !res.ok) {
+				return json({
+					error: 'Fetch failed',
+					detail: fetchErr?.message || `HTTP ${res?.status}`,
+				}, 502);
+			}
+
+			const [html, textErr] = await safeAsync(() => res.text());
+			if (textErr || !html) {
+				return json({ error: 'Body read failed', detail: textErr?.message }, 502);
+			}
+
+			const detection = detectNewsletterProvider(html);
+
+			return json({
+				detection,
+				htmlLength: html.length,
+				stringChecks: {
+					'newsletter-form': html.includes('newsletter-form'),
+					'data-form-id': html.includes('data-form-id'),
+					squarespace: html.toLowerCase().includes('squarespace'),
+				},
+			});
 		}
 
 		// POST /api/import — import restaurants into the database
@@ -149,7 +192,7 @@ export default {
 
 		return json({
 			status: 'ok',
-			endpoints: ['/health', '/api/import', '/api/enrich', '/api/subscribe'],
+			endpoints: ['/health', '/api/debug-detect', '/api/import', '/api/enrich', '/api/subscribe'],
 		});
 	},
 } satisfies ExportedHandler<AppEnv>;

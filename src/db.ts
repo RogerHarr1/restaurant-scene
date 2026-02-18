@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS restaurant_enrichment (
 	newsletter_form_html TEXT,
 	newsletter_provider TEXT,
 	newsletter_direct_endpoint TEXT,
+	newsletter_extracted_params TEXT,
 	enriched_at TEXT NOT NULL,
 	updated_at TEXT NOT NULL
 );
@@ -48,14 +49,16 @@ export async function upsertEnrichment(
 		.prepare(
 			`INSERT INTO restaurant_enrichment
 				(restaurant_id, website_url, newsletter_url, newsletter_form_html,
-				 newsletter_provider, newsletter_direct_endpoint, enriched_at, updated_at)
-			 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+				 newsletter_provider, newsletter_direct_endpoint, newsletter_extracted_params,
+				 enriched_at, updated_at)
+			 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 			 ON CONFLICT(restaurant_id) DO UPDATE SET
 				website_url = excluded.website_url,
 				newsletter_url = excluded.newsletter_url,
 				newsletter_form_html = excluded.newsletter_form_html,
 				newsletter_provider = excluded.newsletter_provider,
 				newsletter_direct_endpoint = excluded.newsletter_direct_endpoint,
+				newsletter_extracted_params = excluded.newsletter_extracted_params,
 				enriched_at = excluded.enriched_at,
 				updated_at = ?`
 		)
@@ -66,6 +69,7 @@ export async function upsertEnrichment(
 			record.newsletter_form_html,
 			record.newsletter_provider,
 			record.newsletter_direct_endpoint,
+			record.newsletter_extracted_params,
 			record.enriched_at,
 			now,
 			now

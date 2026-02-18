@@ -200,6 +200,7 @@ export async function enrichRestaurant(
 			newsletter_form_html: null,
 			newsletter_provider: null,
 			newsletter_direct_endpoint: null,
+			newsletter_extracted_params: null,
 			enriched_at: new Date().toISOString(),
 		});
 		return { provider: null, endpoint: null };
@@ -214,6 +215,7 @@ export async function enrichRestaurant(
 			newsletter_form_html: null,
 			newsletter_provider: null,
 			newsletter_direct_endpoint: null,
+			newsletter_extracted_params: null,
 			enriched_at: new Date().toISOString(),
 		});
 		return { provider: null, endpoint: null };
@@ -230,6 +232,11 @@ export async function enrichRestaurant(
 	const newsletterUrl = detection.directEndpoint || topCandidate?.url || null;
 	const newsletterFormHtml = topCandidate?.formHtml?.slice(0, 5000) || null;
 
+	// Serialize extracted params (formId, collectionId, etc.) for later use
+	const serializedParams = Object.keys(detection.extractedParams).length > 0
+		? JSON.stringify(detection.extractedParams)
+		: null;
+
 	await upsertEnrichment(db, {
 		restaurant_id: restaurantId,
 		website_url: websiteUrl,
@@ -237,6 +244,7 @@ export async function enrichRestaurant(
 		newsletter_form_html: newsletterFormHtml,
 		newsletter_provider: detection.provider,
 		newsletter_direct_endpoint: detection.directEndpoint,
+		newsletter_extracted_params: serializedParams,
 		enriched_at: new Date().toISOString(),
 	});
 

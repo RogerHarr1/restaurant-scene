@@ -126,16 +126,12 @@ export async function handleSubscribeBatch(
 			await sleep(200); // Provider infrastructure can handle faster pacing
 
 			let extractedParams: Record<string, string> = {};
-			// Re-parse params from the stored endpoint if it's Mailchimp
-			if (enrichment.newsletter_provider === 'mailchimp') {
+			// Read persisted params from enrichment
+			if (enrichment.newsletter_extracted_params) {
 				try {
-					const url = new URL(enrichment.newsletter_direct_endpoint);
-					const u = url.searchParams.get('u');
-					const id = url.searchParams.get('id');
-					if (u) extractedParams['u'] = u;
-					if (id) extractedParams['id'] = id;
+					extractedParams = JSON.parse(enrichment.newsletter_extracted_params);
 				} catch {
-					// URL parsing failed, proceed without params
+					// JSON parse failed, proceed without params
 				}
 			}
 

@@ -17,6 +17,7 @@ export interface EnrichmentRecord {
 	newsletter_form_html: string | null;
 	newsletter_provider: string | null;
 	newsletter_direct_endpoint: string | null;
+	newsletter_extracted_params: string | null;
 	enriched_at: string;
 	updated_at: string;
 }
