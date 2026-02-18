@@ -1,6 +1,6 @@
 import type { SubscribeItem } from './types';
 import { json, safeAsync } from './utils';
-import { initSchema } from './db';
+import { initSchema, importRestaurants, getRestaurantsToEnrich, getRestaurantsWithEnrichment } from './db';
 import { enrichRestaurant } from './enrich';
 import { handleSubscribeBatch } from './subscribe';
 
@@ -15,67 +15,141 @@ export default {
 		// Ensure schema exists on first request
 		await initSchema(env.DB);
 
-		// POST /enrich — enrich a single restaurant
-		if (request.method === 'POST' && url.pathname === '/enrich') {
-			const [body, parseErr] = await safeAsync(() =>
-				request.json<{ restaurant_id: string; website_url: string }>()
-			);
-			if (parseErr || !body?.restaurant_id || !body?.website_url) {
-				return json({ error: 'Request body must include restaurant_id and website_url' }, 400);
-			}
-
-			const [result, enrichErr] = await safeAsync(() =>
-				enrichRestaurant(env.DB, body.restaurant_id, body.website_url)
-			);
-			if (enrichErr) {
-				return json({ error: enrichErr.message }, 500);
-			}
-
-			return json({ restaurant_id: body.restaurant_id, ...result });
+		// GET /health — simple health check
+		if (url.pathname === '/health') {
+			return json({ status: 'ok' });
 		}
 
-		// POST /enrich/batch — enrich multiple restaurants
-		if (request.method === 'POST' && url.pathname === '/enrich/batch') {
+		// POST /api/import — import restaurants into the database
+		if (request.method === 'POST' && url.pathname === '/api/import') {
 			const [body, parseErr] = await safeAsync(() =>
-				request.json<{ items: { restaurant_id: string; website_url: string }[] }>()
+				request.json<{ restaurants: { id: string; name: string; website_url?: string | null }[] }>()
 			);
-			if (parseErr || !body?.items?.length) {
-				return json({ error: 'Request body must include items array' }, 400);
+			if (parseErr || !body?.restaurants?.length) {
+				return json({ error: 'Request body must include restaurants array with id and name' }, 400);
+			}
+
+			const [count, dbErr] = await safeAsync(() =>
+				importRestaurants(env.DB, body.restaurants)
+			);
+			if (dbErr) {
+				return json({ error: dbErr.message }, 500);
+			}
+
+			return json({ imported: count });
+		}
+
+		// POST /api/enrich — enrich restaurants using detectNewsletterProvider + extractNewsletterCandidates
+		// Accepts optional { restaurant_ids: string[] } to target specific restaurants,
+		// or { items: [{ restaurant_id, website_url }] } for explicit targets,
+		// or enriches all un-enriched restaurants if no filter is provided.
+		if (request.method === 'POST' && url.pathname === '/api/enrich') {
+			const [body] = await safeAsync(() =>
+				request.json<{ restaurant_ids?: string[]; items?: { restaurant_id: string; website_url: string }[] }>()
+			);
+
+			// If caller passes explicit items, enrich those directly
+			if (body?.items?.length) {
+				const results = [];
+				for (const item of body.items) {
+					const [result, err] = await safeAsync(() =>
+						enrichRestaurant(env.DB, item.restaurant_id, item.website_url)
+					);
+					results.push({
+						restaurant_id: item.restaurant_id,
+						...(err ? { error: err.message } : result),
+					});
+				}
+				return json({ enriched: results.length, results });
+			}
+
+			// Otherwise query the restaurants table for un-enriched entries
+			const [toEnrich, queryErr] = await safeAsync(() =>
+				getRestaurantsToEnrich(env.DB)
+			);
+			if (queryErr) {
+				return json({ error: queryErr.message }, 500);
+			}
+
+			let targets = toEnrich ?? [];
+			// Filter to specific IDs if requested
+			if (body?.restaurant_ids?.length) {
+				const idSet = new Set(body.restaurant_ids);
+				targets = targets.filter((r) => idSet.has(r.id));
+			}
+
+			if (targets.length === 0) {
+				return json({ enriched: 0, results: [] });
 			}
 
 			const results = [];
-			for (const item of body.items) {
+			for (const restaurant of targets) {
 				const [result, err] = await safeAsync(() =>
-					enrichRestaurant(env.DB, item.restaurant_id, item.website_url)
+					enrichRestaurant(env.DB, restaurant.id, restaurant.website_url!)
 				);
 				results.push({
-					restaurant_id: item.restaurant_id,
+					restaurant_id: restaurant.id,
 					...(err ? { error: err.message } : result),
 				});
 			}
 
-			return json({ results });
+			return json({ enriched: results.length, results });
 		}
 
-		// POST /subscribe/batch — subscribe to newsletters
-		if (request.method === 'POST' && url.pathname === '/subscribe/batch') {
+		// POST /api/subscribe — run the tiered subscribe pipeline (Tier 1/2/3)
+		// Accepts { email, restaurant_ids? } or { items: SubscribeItem[] }
+		if (request.method === 'POST' && url.pathname === '/api/subscribe') {
 			const [body, parseErr] = await safeAsync(() =>
-				request.json<{ items: SubscribeItem[] }>()
+				request.json<{ email?: string; restaurant_ids?: string[]; items?: SubscribeItem[] }>()
 			);
-			if (parseErr || !body?.items?.length) {
-				return json({ error: 'Request body must include items array with restaurant_id, email, website_url' }, 400);
+			if (parseErr) {
+				return json({ error: 'Invalid JSON body' }, 400);
+			}
+
+			let items: SubscribeItem[] = [];
+
+			if (body?.items?.length) {
+				// Caller provided explicit items
+				items = body.items;
+			} else if (body?.email) {
+				// Build items from enriched restaurants
+				const [enriched, queryErr] = await safeAsync(() =>
+					getRestaurantsWithEnrichment(env.DB)
+				);
+				if (queryErr) {
+					return json({ error: queryErr.message }, 500);
+				}
+
+				let targets = enriched ?? [];
+				if (body.restaurant_ids?.length) {
+					const idSet = new Set(body.restaurant_ids);
+					targets = targets.filter((r) => idSet.has(r.id));
+				}
+
+				items = targets.map((r) => ({
+					restaurant_id: r.id,
+					email: body.email!,
+					website_url: r.website_url || '',
+				}));
+			}
+
+			if (items.length === 0) {
+				return json({ error: 'No subscribable restaurants found. Provide items[] or email + restaurant_ids.' }, 400);
 			}
 
 			const [results, subErr] = await safeAsync(() =>
-				handleSubscribeBatch(env.DB, body.items)
+				handleSubscribeBatch(env.DB, items)
 			);
 			if (subErr) {
 				return json({ error: subErr.message }, 500);
 			}
 
-			return json({ results });
+			return json({ subscribed: results!.length, results });
 		}
 
-		return json({ status: 'ok', endpoints: ['/enrich', '/enrich/batch', '/subscribe/batch'] });
+		return json({
+			status: 'ok',
+			endpoints: ['/health', '/api/import', '/api/enrich', '/api/subscribe'],
+		});
 	},
 } satisfies ExportedHandler<AppEnv>;

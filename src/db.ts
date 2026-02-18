@@ -1,6 +1,13 @@
-import type { EnrichmentRecord } from './types';
+import type { EnrichmentRecord, Restaurant } from './types';
 
 const SCHEMA_SQL = `
+CREATE TABLE IF NOT EXISTS restaurants (
+	id TEXT PRIMARY KEY,
+	name TEXT NOT NULL,
+	website_url TEXT,
+	created_at TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS restaurant_enrichment (
 	restaurant_id TEXT PRIMARY KEY,
 	website_url TEXT NOT NULL,
@@ -106,4 +113,59 @@ export async function logSubscriptionAttempt(
 			new Date().toISOString()
 		)
 		.run();
+}
+
+export async function importRestaurants(
+	db: D1Database,
+	items: { id: string; name: string; website_url?: string | null }[]
+): Promise<number> {
+	const now = new Date().toISOString();
+	const stmts = items.map((r) =>
+		db
+			.prepare(
+				`INSERT INTO restaurants (id, name, website_url, created_at)
+				 VALUES (?, ?, ?, ?)
+				 ON CONFLICT(id) DO UPDATE SET
+					name = excluded.name,
+					website_url = excluded.website_url`
+			)
+			.bind(r.id, r.name, r.website_url ?? null, now)
+	);
+	await db.batch(stmts);
+	return items.length;
+}
+
+export async function getRestaurantsToEnrich(
+	db: D1Database
+): Promise<Restaurant[]> {
+	const { results } = await db
+		.prepare(
+			`SELECT r.id, r.name, r.website_url, r.created_at
+			 FROM restaurants r
+			 LEFT JOIN restaurant_enrichment e ON r.id = e.restaurant_id
+			 WHERE r.website_url IS NOT NULL AND e.restaurant_id IS NULL`
+		)
+		.all<Restaurant>();
+	return results;
+}
+
+interface RestaurantWithEnrichment extends Restaurant {
+	newsletter_provider: string | null;
+	newsletter_direct_endpoint: string | null;
+	newsletter_url: string | null;
+}
+
+export async function getRestaurantsWithEnrichment(
+	db: D1Database
+): Promise<RestaurantWithEnrichment[]> {
+	const { results } = await db
+		.prepare(
+			`SELECT r.id, r.name, r.website_url, r.created_at,
+					e.newsletter_provider, e.newsletter_direct_endpoint, e.newsletter_url
+			 FROM restaurants r
+			 INNER JOIN restaurant_enrichment e ON r.id = e.restaurant_id
+			 WHERE e.newsletter_url IS NOT NULL OR e.newsletter_direct_endpoint IS NOT NULL`
+		)
+		.all<RestaurantWithEnrichment>();
+	return results;
 }

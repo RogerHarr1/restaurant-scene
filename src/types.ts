@@ -41,3 +41,10 @@ export interface SubscribeResult {
 	success: boolean;
 	evidence: string;
 }
+
+export interface Restaurant {
+	id: string;
+	name: string;
+	website_url: string | null;
+	created_at: string;
+}
