@@ -1,7 +1,7 @@
 import type { SubscribeItem, SubscribeResult, SubmitResult } from './types';
 import { getEnrichment, logSubscriptionAttempt } from './db';
 import { detectNewsletterProvider } from './providers';
-import { submitMailchimp, submitKlaviyo, submitGenericProvider } from './providerSubmit';
+import { submitMailchimp, submitKlaviyo, submitSquarespace, submitGenericProvider } from './providerSubmit';
 import { extractNewsletterCandidates } from './enrich';
 import { safeAsync, sleep } from './utils';
 
@@ -29,6 +29,8 @@ async function tier1Submit(
 			return submitMailchimp(endpoint, params, email);
 		case 'klaviyo':
 			return submitKlaviyo(endpoint, params, email);
+		case 'squarespace':
+			return submitSquarespace(endpoint, params, email);
 		default: {
 			const emailField = PROVIDER_EMAIL_FIELDS[provider] || 'email';
 			return submitGenericProvider(endpoint, emailField, email);

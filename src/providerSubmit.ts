@@ -88,6 +88,52 @@ export async function submitKlaviyo(
 }
 
 /**
+ * POST to Squarespace's FormSubmit API endpoint.
+ * Uses JSON body with formId, collectionId, and the email field.
+ */
+export async function submitSquarespace(
+	endpoint: string,
+	params: Record<string, string>,
+	email: string
+): Promise<SubmitResult> {
+	const payload: Record<string, unknown> = {
+		formId: params['formId'] || '',
+		collectionId: params['collectionId'] || '',
+		objectName: 'page',
+		fields: { email },
+	};
+
+	const [res, err] = await safeAsync(() =>
+		fetch(endpoint, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(payload),
+			redirect: 'follow',
+		})
+	);
+
+	if (err) {
+		return { success: false, evidence: `Squarespace POST failed: ${err.message}` };
+	}
+
+	const status = res.status;
+	const text = await safeAsync(() => res.text());
+	const responseSnippet = text[0] ? text[0].slice(0, 500) : '';
+
+	if (status >= 200 && status < 400) {
+		return {
+			success: true,
+			evidence: `Squarespace POST ${status} to ${endpoint} — ${responseSnippet}`,
+		};
+	}
+
+	return {
+		success: false,
+		evidence: `Squarespace POST returned ${status} — ${responseSnippet}`,
+	};
+}
+
+/**
  * Fallback POST for other known providers (Constant Contact, MailerLite, Beehiiv, Substack).
  * Posts form-urlencoded with a configurable email field name.
  */

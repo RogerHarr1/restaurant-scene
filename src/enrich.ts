@@ -13,6 +13,7 @@ const PROVIDER_DOMAINS = [
 	'ml.com',
 	'beehiiv.com',
 	'substack.com',
+	'squarespace.com',
 ];
 
 /**
@@ -49,6 +50,34 @@ export function extractNewsletterCandidates(html: string): NewsletterCandidate[]
 		if (score > 0) {
 			candidates.push({ url, score, source: 'form_action', formHtml, positionRatio });
 		}
+	}
+
+	// 1b. Forms WITHOUT an action attribute but WITH a type="email" input
+	// Squarespace and other JS-driven forms often submit via script, not action.
+	const actionlessFormRegex = /<form(?=[^>]*>)(?![^>]*action=)[^>]*>([\s\S]*?)<\/form>/gi;
+	for (const match of html.matchAll(actionlessFormRegex)) {
+		const formHtml = match[0];
+		const positionRatio = match.index! / htmlLength;
+
+		// Only consider if the form has an email input
+		if (!/type=["']email["']/i.test(formHtml) && !/name=["'](?:email|EMAIL)["']/i.test(formHtml)) {
+			continue;
+		}
+
+		let score = 10; // baseline: it has an email input
+
+		if (NEWSLETTER_KEYWORDS.test(formHtml)) {
+			score += 20;
+		}
+
+		// Squarespace markers inside the form
+		if (/class=["'][^"']*newsletter-form/i.test(formHtml) || /data-form-id/i.test(formHtml)) {
+			score += 25;
+		}
+
+		// Use a placeholder URL — the real endpoint comes from provider detection
+		const url = '#actionless-email-form';
+		candidates.push({ url, score, source: 'form_action', formHtml, positionRatio });
 	}
 
 	// 2. Anchor hrefs (newsletter-related links)

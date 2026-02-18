@@ -241,6 +241,55 @@ const matchers: ProviderMatcher[] = [
 		},
 	},
 	{
+		name: 'squarespace',
+		detect(html) {
+			let confidence = 0;
+			let endpoint: string | null = null;
+			const params: Record<string, string> = {};
+
+			// class="newsletter-form" is the primary Squarespace signal
+			const hasNewsletterForm = /class=["'][^"']*newsletter-form[^"']*["']/i.test(html);
+			if (hasNewsletterForm) {
+				confidence += 40;
+			}
+
+			// data-form-id anywhere in the HTML combined with squarespace
+			const formIdMatch = html.match(/data-form-id=["']([^"']+)["']/i);
+			if (formIdMatch) {
+				params['formId'] = formIdMatch[1];
+				if (/squarespace/i.test(html)) {
+					confidence += 40;
+				} else {
+					confidence += 10;
+				}
+			}
+
+			// Extract collectionId from inline onsubmit or nearby script
+			const collectionMatch = html.match(/collectionId["'\s:=]+["']([^"']+)["']/i);
+			if (collectionMatch) {
+				params['collectionId'] = collectionMatch[1];
+				confidence += 10;
+			}
+
+			// Build the direct submit endpoint from the page's own domain
+			if (confidence > 0 && params['formId']) {
+				// Try to find the site domain from a canonical link or og:url
+				const canonicalMatch = html.match(
+					/<link[^>]+rel=["']canonical["'][^>]+href=["'](https?:\/\/[^"'/]+)/i
+				);
+				const ogMatch = html.match(
+					/<meta[^>]+property=["']og:url["'][^>]+content=["'](https?:\/\/[^"'/]+)/i
+				);
+				const domain = canonicalMatch?.[1] || ogMatch?.[1] || null;
+				if (domain) {
+					endpoint = `${domain}/api/form/FormSubmit`;
+				}
+			}
+
+			return { matched: confidence > 0, confidence, endpoint, params };
+		},
+	},
+	{
 		name: 'substack',
 		detect(html) {
 			let confidence = 0;
