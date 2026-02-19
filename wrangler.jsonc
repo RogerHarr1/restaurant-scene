@@ -20,8 +20,8 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "restaurant-scene-db",
-			"database_id": "PLACEHOLDER_ID"
+			"database_name": "restaurant_scene_db",
+			"database_id": "d9d21b6f-fd5d-469c-bf1f-7cc6b6768855"
 		}
 	]
 	/**

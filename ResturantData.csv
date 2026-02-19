@@ -1,11 +1,400 @@
-﻿CustomerId,RestaurantName,Street,City,State,Zip,Phone,Website
-4630,Rabbit Hole,3377 Adams Avenue,San Diego,CA,92116,619-255-4653,https://rabbitholesd.com/
-3407,Nutmeg Bakery & Cafe 1,12640 Sabre Springs Pkwy,San Diego,CA,92128,858-405-2401,https://www.nutmegsd.com/
-5259,Trust Restaurant,3752 Park Blvd,San Diego,CA,92103,609-780-7572,https://www.trustrestaurantsd.com/
-3020,Ki's Kitchen Commissary,2530 PIONEER AVE,VISTA,CA,92081,760-777-0700,https://kis-kitchen.com
-541,Noble House Hotels & Resorts,1775 East Mission Bay Drive,San Diego,CA,92109,619-276-4010,https://www.hilton.com/en_US/hi/hotel/SANHIHF-Hilton-San-Diego-Resort-California/index.do
-179,Cody's La Jolla,1025 Prospect St.,La Jolla,CA,92037,858-459-0040,https://www.codyslajolla.com
-5348,Kindred Bar,1503 30th Street,San Diego,CA,92102,858-342-3609,https://barkindred.com/
-2915,Warren Walker School Mission Valley,4605 Point Loma Ave,San Diego,CA,92107,619-223-3663,https://www.warren-walker.com/
+CustomerId,RestaurantName,Street,City,State,Zip,Phone,Website
+907,Town & Country Main Storeroom,500 Hotel Circle North,San Diego,CA,92108-3091,619-291-7131,https://www.towncountry.com/
+5425,Rubicon Deli-UTC,4130 La Jolla Village Dr.,San Diego,CA,92037,858-877-9911,https://www.rubicondeli.com
+4943,Lauberge Del Mar Spa,1540 Camino Del Mar,Del Mar,CA,92014,858-259-1515,https://www.laubergedelmar.com/dining_index.htm
+3608,Lofty Coffee Co-Encinitas,90 N Coast Highway 101,Encinitas,CA,92024,760-230-6747,https://loftycoffee.com/
+3185,Jack & Giulio's,2391 San Diego Ave,San Diego,CA,92110,619-294-2074,https://www.jackandgiulios.com/
+2854,Costa Brava,1653 Garnet Ave,San Diego,CA,92109,858-273-1218,https://www.costabravasd.com/
+3451,BFD-Big Front Door,4075 Park Blvd,San Diego,CA,92103,619-723-8183,https://bfdsandiego.com
+838,Surf Side Cuisine,1912 Rosecrans Suite A,San Diego,CA,92106,619-507-0891,https://www.surfsidecuisine.com/
+2796,Analog,801 5th Ave,San Diego,CA,92101,619-233-1183,https://analogbar.com/
+177,Miguel's Cocina Coronado,1351 Orange Ave,Coronado,CA,92118,619-437-4237,https://www.brigantine.com/locations_migcor.html
+3521,"Snooze H.C, LLC",3940 5th Ave,San Diego,CA,92103,619-500-3344,https://www.snoozeeatery.com
+458,Bread & Cie,,San Diego,CA,,619-683-9322,https://breadandciecatering.com
+8822,Tribute Pizza (Bar),3077 N Park Way,San Diego,CA,92104,858-220-0030,https://tributepizza.com/
+5824,PFC Fitness Camp,2100 Costa Del Mar Rd,Carlsbad,CA,92009,888-488-8936,https://www.chefjasonkieffer.com
+3485,"Cape Rey Carlsbad, a Hilton Resort",Ponto Dr,Carlsbad,CA,92011,760-602-0800,https://hiltoncarlsbadoceanfront.com/
+5059,Lofty Coffee Co-Solana Beach,132 South Cedros Avenue,Solana Beach,CA,92075,760-230-6747,https://loftycoffee.com/
+216,Georges at the Cove,1250 Prospect St,San Diego,CA,92037,858-454-4244,https://www.georgesatthecove.com
+8292,Paradise Point The Spa,1404 Vacation Rd,San Diego,CA,92109,858-490-6363,https://www.paradisepoint.com
+3108,Saiko Sushi-Coronado,116 Orange Ave,Coronado,CA,92118,619-435-0868,https://saikosushisd.com/
+4255,MCRD-Marine Corps Recruit Dept,3800 Chosin Avenue Bld 132,San Diego,CA,92140,619-725-6478,https://www.mcrdsd.marines.mil/
+1112,Beaumont's,5662 La Jolla Blvd,San Diego,CA,92037,858-459-0474,https://www.beaumontseatery.com/
+604,Point Loma Seafood,2805 Emerson St,San Diego,CA,92106,619-223-1109,https://www.pointlomaseafoods.com/
+2569,College Cuisine - Chi Omega,5076 College Pl.,San Diego,CA,92115,310-402-6195,https://greeklife.sdsu.edu/
+2579,Mister A's (Misc.),2550 5th Ave #111,San Diego,CA,92103,619-239-1377,https://www.bertrandatmisteras.com
+623,Pacific Coast Grill,2526 South Highway 101 suite 112,Solana Beach,CA,92075,858-794-4632,https://www.pacificcoastgrill.com
+297,Pascucci Pasta,4561 Mission Gorge Pl,San Diego,CA,92120,619-285-8000,https://www.pascuccipasta.com
+2087,Lucha Libre Taco Shop,1810 W Washington,San Diego,CA,92103,619-296-8226,https://www.tacosmackdown.com/
+519,Michele Coulon Dessertier,7556 Fay Ave,San Diego,CA,92037,858-456-5098,https://www.dessertier.com
+3905,Tavern at the Beach,1200 Garnet Avenue,San Diego,CA,92109,858-272-6066,https://www.tavernatthebeach.com/
+2284,Vista Valley,29354 Vista Valley Dr,Vista,CA,92084,760-758-2800,https://www.vistavalley.com/home/index.htm
+5241,The Crack Shack-San Diego,2226 Kettner Boulevard,San Diego,CA,92101,619-795-3299,https://www.crack-shack.com/
+5449,Maxota Raw,475 10th Ave,San Diego,CA,92101,201-615-1727,https://www.maxotaraw.com
+5138,Kaiserhof,2263 Sunset Cliffs Boulevard,San Diego,CA,92107,619-224-0606,https://www.KaiserhofRestaurant.com
+840,Marriott Gaslamp,660 K St,San Diego,CA,92101,,https://www.marriott.com/hotels/travel/sangl-san-diego-marriott-gaslamp-quarter/
+5334,Viejas Casino Banquets,5000 Willows Road,Alpine,Ca,,619-295-3172,https://viejas.com/hotel/catering-banquets
+816,Ruth's Chris Steak House DT,1355 N Harbor Dr,San Diego,CA,92101,619-233-1422,https://www.ruthschris.com/
+7301,La Jolla Country Club,7301 High Ave,San Diego,CA,92037,858-454-9601,https://www.lajollacountryclub.com/
+3531,Sushi Tadokoro,2244 San Diego Ave,San Diego,CA,92110,619-347-2792,https://sushitadokoro.com/
+2823,Craft and Commerce (Sekscobra Inc.),675 W Beech St,San Diego,CA,92101,619-962-5935,https://www.craft-commerce.com/
+176,Miguel's Cocina Pt Loma,2912 Shelter Island Dr,San Diego,CA,92106,619-224-2401,https://www.brigantine.com/locations_migpl.html
+3447,Villa Capri Poway,14771 Pomerado Rd,Poway,CA,92064,858-391-9400,https://villacapriristorante.com/
+4251,Ironside Inc.,1654 India Street,San Diego,CA,92101,312-852-6308,https://ironsidesandiego.com
+5487,Herb & Wood,2210 Kettner Blvd,San Diego,CA,92101,520-205-1288,https://www.herbandwood.com
+4701,Sidecar,1310 Morena Boulevard,San Diego,CA,92110,619-230-5715,https://www.sidecarsd.com/
+3689,Nate's Garden Grill,3120 Euclid Avenue,San Diego,CA,92105,619-607-0117,https://www.natesgardengrill.com/
+2270,Lil Piggy's,1201 1st St,Coronado,CA,92118,619-522-6890,https://www.nadolife.com/lilpiggys/index.html
+2972,The Joint,4902 Newport Ave,San Diego,CA,92107,619-222-8272,https://thejointob.com
+5307,The Crack Shack-San Diego (Bar),2226 Kettner Blvd,San Diego,CA,92101,619-269-9036,https://www.crack-shack.com/
+761,Bread & Cie Bakery,4901 Pacific Hwy,San Diego,CA,92110,619-688-1788,https://breadandciecatering.com/default.aspx
+1800,La Costa Resort & Spa Main Kitchen,2100 Costa Del Mar Rd,Carlsbad,CA,92009,760-930-7063,https://www.lacosta.com/dining/default.asp
+4407,Ironside Bar Inc.,,San Diego,CA,,619-269-3033,https://ironsidefishandoyster.com/
+2331,Lodge at Torrey Pines Grill,11480 N Torrey Pines Rd,San Diego,CA,92037,858-453-4420,https://www.lodgetorreypines.com/
+9270,Lafayette Hotel - Lou Lou's (Bar),2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+9228,Davanti Enoteca Little Italy,1655 India St,San Diego,CA,92101,619-237-9606,https://www.davantienoteca.com/
+5302,Madison,4622 Park Blvd,San Diego,CA,92116,619-822-3465,https://www.madisononpark.com/
+4314,The Shout House,655 4th Avenue,San Diego,CA,92101,619-231-6700,https://sd.theshouthouse.com/
+9822,Brigantine Pt Loma Bar,13445 Poway Rd,Poway,CA,92064,858-486-3066,https://brigantine.com/locations_brigpow.html
+337,Marriott Coronado,2000 2nd St,Coronado,CA,92118,,https://www.marriott.com/hotels/travel/sanci-coronado-island-marriott-resort/
+8981,Lafayette Hotel - Beginners Diner,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+312,Brigantine Coronado,1333 Orange Ave,Coronado,CA,92118,619-435-4166,https://brigantine.com/locations_brigcor.html
+9246,Viejas Casino TMDR,5000 Willows Rd,Alpine,CA,91901,619-659-1774,https://www.viejas.com/
+4549,La Costa Resort & Spa Pastry,2100 Costa Del Mar Rd,Carlsbad,CA,92009,760-431-8455,https://www.lacosta.com/dining/default.asp
+3282,Lafayette Hotel,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+1353,Trilogy Sanctuary,7650 Girard Avenue #400,La Jolla,CA,92037,858-633-3893,https://www.trilogysanctuary.com
+2499,Estancia Adobe,9700 N Torrey Pines Rd,San Diego,CA,92037,858-550-1000,https://www.estanciahotel.com
+4612,Under Belly-Uptown,3000 Upas Street,San Diego,CA,92104,619-269-4626,https://www.godblessunderbelly.com
+3006,Caffe Calabria Coffee Roasting Company,3933 30th St,San Diego,CA,92104,619-683-7787,https://www.caffecalabria.com
+4733,Coast Catering,445 Corporate Drive,Escondido,CA,92029,619-295-3173,https://cateringbybarry.com/
+3886,Ballast Point Rest. - Little Italy,2215 India Street,San Diego,CA,92101,619-298-2337,https://www.ballastpoint.com/
+3702,Polite Provisions,4696 30th Street,San Diego,CA,92116,619-677-3784,https://politeprovisions.com/
+4645,Jalisco Cantina,2961 State Street,Carlsbad,CA,92008,619-204-5945,https://barrelrepublic.com
+426,The Shores,8110 Camino Del Oro,La Jolla,CA,92037,858-459-8271,https://www.ljshoreshotel.com/
+3382,Rancho Valencia The Villas,5921 Rancho Valencia Rd,Del Mar,CA,92014,858-756-1123,https://www.villasranchovalencia.com/
+2927,Urbn Pizza Bar,3085 University Ave,San Diego,CA,92104,619-255-7300,https://www.urbnnorthpark.com/
+2117,Bernini's Bistro,7550 Fay Ave.,La Jolla,CA,92037,858-454-5013,https://www.berninisbistro.com/
 2126,Stout Public House,1125 6th Ave,San Diego,CA,92101,619-702-7933,https://stoutsd.com/
+186,Brockton Villa Restaurant,1235 Coast Blvd,San Diego,CA,92037,858-454-7393,https://www.brocktonvilla.com
+887,Cucina Urbana,505 Laurel St,San Diego,CA,92101,,https://www.cucinaurbana.com
+3081,Eddie V's La Jolla,1270 Prospect St,La Jolla,CA,92037,858-459-5500,https://www.eddiev.com/
+2035,Monarch School,1625 Newton Avenue,San Diego,CA,92113,619-804-1766,https://www.monarchschools.org
+3536,Whiskey Girl,702 5th Ave,San Diego,CA,92101,619-236-1616,https://whiskeygirl.com/
+313,Brigantine Del Mar,3263 Camino Del Mar,Del Mar,CA,92014,858-481-1166,https://brigantine.com/locations_brigdm.html
+21,Hilton Mission Valley,901 Camino del Rio South,San Diego,CA,92108,619-543-9000,https://www.hilton.com/en_US/hi/hotel/SANMVHF-Hilton-San-Diego-Mission-Valley-California/index.do
+1891,Sheraton La Jolla,3299 Holiday Ct,San Diego,CA,92037,858-453-5500,https://www.starwoodhotels.com/sheraton/property/dining/index.html?propertyID=1959
+1692,The Field Irish Pub & Restaurant,544 Fifth Ave.,San Diego,CA,92101,619-232-9840,https://www.thefield.com
+1850,Addison Del Mar,5200 Grand Del Mar Ave,Del Mar,CA,92130,858-350-7600,https://www.addisondelmar.com/
+4481,Vagabond Sportfishing Inc.,1403 Scott Street,San Diego,CA,92106,619-993-9575,https://www.vagabondsportfishing.com/
+634,Marroitt Del Mar,11966 El Camino Real,San Diego,CA,92130,858-369-6029,https://www.marriott.com/hotels/hotel-information/restaurant/sandm-san-diego-marriott-del-mar/
+2908,Tipsy Crow,770 5th Ave,San Diego,CA,92101,619-338-9300,https://thetipsycrow.com/
+4536,Panama 66,1450 El Prado,San Diego,CA,92101,619-206-6352,https://panama66.blogspot.com/
+1290,Georges at the Cove Bar,1250 Prospect St,San Diego,CA,92037,858-454-5702,https://www.georgesatthecove.com
+355,Bahia Resort Hotel,998 W Mission Bay Dr,San Diego,CA,92109,858-488-0551,https://www.bahiahotel.com
+9051,Lafayette Hotel - Quixote (Bar),2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+2182,Piatti,2182 Avenida De La Playa,San Diego,CA,92037,858-454-1589,https://www.piatti.com/
+1999,Neighborhood Burger,777 G St,San Diego,CA,92101,619-446-0002,https://www.neighborhoodsd.com/
+2183,Third Corner Encinitas,897 S Coast Highway 101,Encinitas,CA,92024,760-942-2104,https://www.the3rdcorner.com/directions-3rd.html
+5541,Revolution Roasters,1836 S Coast Hwy,Oceanside,CA,92054,760-330-6827,https://revoroasters.com
+2376,The Wild Thyme Company,,San Diego,CA,,619-347-7857,https://www.wildthymecompany.com
+2975,Snake Oil Cocktail Company LLC,1735 Hancock St,San Diego,CA,92101,619-754-4041,https://www.snakeoilcocktail.com/
+4962,The Cottage La Jolla,7702 Fay,La Jolla,CA,92037,858-454-8408,https://www.sandiegobandb.com/cottage
+4354,Juice Wave,8680 Miralani Dr.,San Diego,CA,92126,240-246-5126,https://www.juicewavesd.com
+9269,Lafayette Hotel - Lou Lou's,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+3401,Glenbrook Health Center,1950 Calle Barcelona,Carlsbad,CA,92009,760-704-1000,https://www.lacostaglen.com/
+2868,Kappa Sushi,9870 Hibert St,San Diego,CA,92131,858-566-3388,https://www.kappa-sd.com/
+2852,Mister A's Dairy,2550 5th Ave #111,San Diego,CA,92103,619-239-1377,https://www.bertrandatmisteras.com
+3469,Vi At La Jolla Village,8515 Costa Verde Blvd,San Diego,CA,92122,858-646-7700,https://www.viliving.com/communities/lajolla
+4388,Common Theory,4805 Convoy Street,San Diego,CA,92111,858-384-7974,https://www.commontheorysd.com/
+399,Cal A Vie,29402 Spa Haven Way,Vista,CA,92084,760-945-2055,https://www.cal-a-vie.com
+3623,Grossmont-Cuyamaca Community College District,8800 Grossmont College Dr,El Cajon,CA,92020,619-644-7585,https://www.gcccd.edu/
+2418,Hilton Garden Inn,3939 Ocean Bluff Ave,San Diego,CA,92130,858-720-9500,https://hiltongardeninn.hilton.com/en/gi/hotels/index.jhtml?ctyhocn=SANMDGI&ctyhocn=SANMDGI
+3412,Miguel's Cocina Carlsbad,5980 Avenida Encinas,Carlsbad,CA,92008,760-759-1843,https://www.miguels-cocina.com/
+2205,Cantina Mayahuel,2934 Adams Ave,San Diego,CA,92116,619-283-6292,https://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=85897192
+2980,Paradise Point Resort Tidal,1404 Vacation Rd,San Diego,CA,92109,858-490-6363,https://www.paradisepoint.com
+1267,Paradise Point Resort Island Market,1404 Vacation Rd,San Diego,CA,92109,858-490-6363,https://www.paradisepoint.com
+5251,Fresh Sushi Catering,6964 Feldspar Pl,Carlsbad,CA,92009,858-344-7098,https://www.freshsushicatering.com
+5134,Kindred,1503 30th Street,San Diego,CA,92102,619-295-3172,https://barkindred.com/
+3882,Tribute Pizza,3077 N Park Way,San Diego,CA,92104,858-220-0030,https://tributepizza.com/
+2652,The Market by Buon Appetito,1605 India St,San Diego,CA,92101,619-237-1335,https://www.themarketlittleitaly.com/
+2314,Viejas Casino,5000 Willows Road,Alpine,CA,91901,619-659-1774,https://www.viejas.com/
+4250,Juniper & Ivy,2228 Kettner Blvd,San Diego,CA,92101,858-481-3666,https://www.juniperandivy.com
+3700,The Haven (Pizzeria),4051 Adams Avenue,San Diego,CA,92116,619-964-3778,https://thehavenpizzeria.com
+8795,Chateau La Jolla (Bread),233 Prospect St,La Jolla,CA,92037,858-459-4451,https://www.chateaulajollainn.com/
+525,Hyatt Islandia,1441 Quivira Rd,San Diego,CA,92109,619-224-1234,https://www.hyatt.com/usa/san_diego/hotels/restaurants_sanis.html
+2567,RB Sushi,16405 Bernardo Center Dr,San Diego,CA,92128,858-613-9000,https://www.rbsushi.com/
+4589,Paradise Point Resort Bar Beverage,1404 Vacation Rd,San Diego,CA,92109,858-490-6363,https://www.paradisepoint.com
+4937,Rancho Valencia Spa,5921 Rancho Valencia Road,Del Mar,CA,92014,858-759-6490,https://www.ranchovalencia.com/
+9400,La Valle Coastal Club,5690 Cancha de Golf,Rancho Santa Fe,CA,92091,858-759-5473,https://www.morganrun.com/
+2063,Stone Brewing World Bistro & Gardens,1999 Citracado Pkwy,Escondido,CA,92029,915-861-2297,https://www.stonebrew.com/
+4098,Solterra Winery + Kitchen,934 North Coast Highway 101,Encinitas,CA,92024,858-245-6146,https://www.solterrawinery.com
+779,Rancho Santa Fe Golf Club,5827 Via De La Cumbre,Rancho Santa Fe,CA,92091,858-756-1582,https://www.rsfgc.com
+7528,Stone Brewing World Bistro & Gardens Banquets,1999 Citracado Pkwy,Escondido,CA,92029,760-294-7866,https://www.stonebrew.com
+1934,Blue Water Seafood Market and Grill,3667 India St,San Diego,CA,92103,619-497-0914,https://www.bluewater.sandiegan.com/
+5141,Pamplemousse Grille,514 Via De La Valle #100,Solana Beach,CA,92075,858-792-9090,https://www.pgrille.com/home.html
+992,Sandbar Sports Grill,718 Ventura Pl.,San Diego,CA,92109,858-488-1274,https://www.sandbarsportsgrill.com/
+743,Bishop School,7607 La Jolla Blvd,San Diego,CA,92037,858-459-4021,https://www.bishops.com
+889,Tom Hams Light House,2150 Harbor Island Dr,San Diego,CA,92101,619-291-9110,https://www.tomhamslighthouse.com/
+2883,Chateau La Jolla,233 Prospect St,San Diego,CA,92037,858-459-4451,https://www.chateaulajollainn.com/
+9050,Lafayette Hotel - (Bar) Beginners Diner,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+2616,Gossip Grill,1220 University Ave,San Diego,CA,92103,619-260-8023,https://www.thegossipgrill.com
+1096,Venissimo Cheese Hillcrest,754 W Washington St,San Diego,CA,92103,619-491-0708,https://www.venissimo.com
+4161,Puesto-Downtown,789 West Harbor Drive,San Diego,CA,92101,619-233-8880,https://www.eatpuesto.com
+3525,Uptown Tavern,1236 University Ave,San Diego,CA,92103,619-683-9322,https://www.uptowntavernsd.com/
+4426,Belmont Park Draft,3125 Ocean Front Walk,San Diego,CA,92109,858-228-9283,https://www.belmontpark.com/restaurants/draft/
+4525,Brigantine Escondido Bar,421 W Felicita Ave,Escondido,CA,92025,760-743-4718,https://brigantine.com/locations_brigesc.html
+1302,Golden Door,777 Deer Springs Rd,San Marcos,CA,92069,760-761-4142,https://www.goldendoor.com/escondido/index.cfm
+612,Tartine,1106 1st St,Coronado,CA,92118,619-435-4323,https://www.tartinecoronado.com
+1375,Bali Hai Restaurant,2230 Shelter Island Dr,San Diego,CA,92106,619-222-1181,https://www.balihairestaurant.com/
+5144,Brandon Matzek- Blogger, ,San Diego,CA, ,800-221-9730,https://www.kitchenkonfidence.com/
+454,Humphrey's,2241 Shelter Island Dr,San Diego,CA,92106,619-224-3577,https://humphreysrestaurant.com/
+6701,US Grant Hotel Grill,326 Broadway,San Diego,CA,92101,619-232-3121,https://www.grantgrill.com/
+5179,La Costa Resort & Spa Store Room,2100 Costa Del Mar Rd,Carlsbad,CA,92009,760-431-8455,https://www.lacosta.com/dining/default.asp
+260,Cafe Coyote,2461 San Diego Ave,San Diego,CA,92110,619-291-4695,https://www.cafecoyoteoldtown.com/
+5348,Kindred Bar,1503 30th Street,San Diego,CA,92102,858-342-3609,https://barkindred.com/
+2842,Craft and Commerce Bar,675 W Beech St,San Diego,CA,92110,619-269-0288,https://www.craft-commerce.com/
+2829,Cesarina,4161 Voltaire St,San Diego,CA,92107,619-226-6222,https://www.tothepointsandiego.com/
+3861,Enoteca Adriano,4864 Cass Street,San Diego,CA,92109,858-490-0085,https://www.enotecaadriano.com/
+3541,Marriott Marina Kitchen,333 W Harbor Dr,San Diego,CA,92101,619-234-1500,https://www.marriott.com/hotels/travel/sandt-san-diego-marriott-hotel-and-marina/
+5188,Hane,2760 5th Avenue #105,San Diego,CA,92101,619-339-6438,https://www.hanesushi.com/appetizer.htm
+1373,The Farm Golf Club,8500 St. Andrews Road,Rancho Santa Fe,CA,92067,858-756-5585,https://thefarmsgolfclub.com/
+4564,Lucky Bolt,"10920 Roselle St, suite 104-105",San Diego,CA,92121,662-832-3638,https://www.luckybolt.com/
+2077,WetStone Winebar Bankers Hill,1927 4th Ave,San Diego,CA,92101,619-255-2856,https://wetstonewinebar.com
+4673,Eddie V's Prime Seafood,789 W Harbor Dr,San Diego,CA,92101,619-615-0281,https://www.eddiev.com/en/locations/ca/san-diego/8514
+5903,Campfire Bar,2725 State St,Carlsbad,CA,92008,858-231-0862,https://thisiscampfire.com
+4572,Mister A's Pastry,2550 5th Ave #111,San Diego,CA,92103,619-239-1377,https://www.bertrandatmisteras.com
+4275,Stone Brewing-Liberty Station,2816 Historic Decatur Road,San Diego,CA,92106,619-269-2100,https://www.stonelibertystation.com/
+8982,El Agave Restaurant & Tequileria,2304 San Diego Ave,San Diego,CA,92110,619-220-0692,https://www.elagave.com/
+6722,Culinary Concepts,9950 Scripps Lake Dr,San Diego,CA,92131,619-865-1918,https://www.cateringspecialist.com/
+346,Pacifica Del Mar,1555 Camino Del Mar,Del Mar,CA,92014,858-792-0505,https://www.pacificadelmar.com
+1273,Firefly Beach,1710 W Mission Bay Dr,San Diego,CA,92109,619-222-6440,https://www.thedana.com/san-diego-restaurants/index.cfm
+5191,Town & Country Bakery,500 Hotel Circle North,San Diego,CA,92108,619-291-7131,https://www.destinationhotels.com/town-country/dining
+5312,Encontro North Park,3001 University Ave,San Diego,CA,92104,310-955-6333,https://encontronorthpark.com/
+2202,Azucar,4820 Newport Ave,San Diego,CA,92107,619-523-2020,https://www.iloveazucar.com
+218,University Club,750 B St.,San Diego,CA,92101,619-234-5200,https://www.clubcorp.com/club/scripts/section/section.asp?NS=PCH&MFCODE=UCAST
+6296,Smoking Gun,555 Market St,San Diego,CA,92101,619-276-6700,https://www.thesmokinggunsd.com/
+217,Extraordinary Desserts,2870 4th Ave,San Diego,CA,92103,619-294-2132,https://www.extraordinarydesserts.com
+1586,Bernardo Heights Country Club,16066 Bernardo Heights Pkwy,San Diego,CA,92128,858-487-4022,https://www.bhcc.net
+2978,Paradise Point Resort BQT Kitchen,1404 Vacation Rd,San Diego,CA,92109,858-490-6363,https://www.paradisepoint.com
+3895,Rancho Bernardo Inn (Avant),17550 Bernardo Oaks Drive,San Diego,CA,92128,858-675-8505,https://www.ranchobernardoinn.com/avant/
+670,US Grant Hotel Main,326 Broadway,San Diego,CA,92101,619-232-3121,https://www.usgrant.net/home.html
 408,Brigantine Pt Loma,2725 Shelter Island Dr,San Diego,CA,92106,619-224-2871,https://brigantine.com/locations_brigpl.html
+4078,Cucina Enoteca,2730 Via De La Valle,Del Mar,CA,92014,619-239-2222,https://www.urbankitchengroup.com/
+1200,Wine Vault & Bistro,3731 A India St,San Diego,CA,92103,619-295-3939,https://www.winevaultbistro.com/
+4493,The Local-Pacific Beach,809 Thomas Avenue,San Diego,CA,92109,858-263-7475,https://thelocalpb.com/
+219,La Valencia,1132 Prospect St,San Diego,CA,92037,858-551-3750,https://www.lavalencia.com/
+3768,Mister A's Bar,2550 5th Ave #111,San Diego,CA,92103,619-239-1377,https://www.asrestaurant.com/
+778,Extraordinary Desserts Union St.,1430 Union St,San Diego,CA,92101,619-294-7001,https://www.extraordinarydesserts.com/
+1736,Cafe 222,Island Ave & 2nd Ave,San Diego,CA,92101,619-236-9902,https://www.cafe222.com
+2762,Bleu Boheme,4090 Adams Ave,San Diego,CA,92116,619-255-4167,https://bleuboheme.com/
+476,San Diego Yacht Club,1011 Anchorage Lane,San Diego,CA,92106,619-758-6334,https://www.sdyc.org/
+278,Catalina Resources,5202 Lovelock St,San Diego,CA,92110,619-297-9797,https://www.catalinaop.com
+3785,The Country Club Of Rancho Bernardo,12280 Greens East Rd,San Diego,CA,92128,858-487-1134,https://www.ccofrb.com/
+3823,Redwing Bar & Grill,4012 30th Street,San Diego,CA,92104,619-281-8700,https://redwingbar.com
+4959,Healthy Creations-Encinitas,376 North El Camino Real,Encinitas,CA,92024,760-479-0500,https://www.healthycreationscafe.com
+4811,Home & Away - Old Town,2222 San Diego Avenue,San Diego,CA,92110,619-886-1358,https://homeandawaysd.com/
+8654,Monarch School (Main Kitchen),1625 Newton Ave,San Diego,CA,92113,619-651-6604,https://www.monarchschools.org
+2653,Trattoria I Trulli,830 S Coast Highway 101,Encinitas,CA,92024,760-277-9826,https://www.itrulli.signonsandiego.com
+347,Convention Center,111 W Harbor Dr,San Diego,CA,92101,619-525-5832,https://www.sdccc.org/
+208,Rancho Valencia,5921 Rancho Valencia Rd,Del Mar,CA,92014,858-756-1123,https://www.ranchovalencia.com/
+9244,Two Ducks (Deliver Lion Share),629 Kettner Blvd,San Diego,CA,92101,619-564-6924,https://www.lionssharesd.com/
+3878,Peace Pies,4230 Voltaire Street,San Diego,CA,92107,619-618-6960,https://peacepies.com/
+336,Peohes,1201 1st St,Coronado,CA,92118,619-437-4474,https://www.peohes.com
+1128,Bully's East,2401 Camino Del Rio S,San Diego,CA,92108,619-291-2665,https://www.bullyseastsd.com/bullys/index.aspx
+9701,Fish Market Downtown,750 N Harbor Dr,San Diego,CA,92132,619-232-3474,https://www.thefishmarket.com
+2417,Mesa College,7250 Mesa College Dr,San Diego,CA,92111,619-388-2240,https://www.sdmesa.edu/
+4725,Little Lion,1424 Sunset Cliffs Boulevard,San Diego,CA,92107,619-519-4079,https://thelittlelioncafe.com/
+2328,333 Pacific,333 N Pacific St,Oceanside,CA,92054,760-433-3333,https://www.cohnrestaurants.com/restaurants/333pacific/
+9866,Del Mar Country Club,6001 Clubhouse Dr,Rancho Santa Fe,CA,92067,858-759-5995,https://www.delmarcountryclub.com
+2317,Crown Point Catering,4927 Voltaire St,San Diego,CA,92107,619-223-1211,https://www.crownpointcatering.com/
+4679,Catania La Jolla,1044 Wall Street,La Jolla,CA,92037,619-884-5350,https://www.facebook.com/cataniasd
+3248,Chef Jenn,1915 calle barcelona,Solana Beach,CA,92075,858-212-9054,https://chefjenncooks.com/
+3438,Love Boat Sushi-Oceanside,125 Old Grove Rd,Oceanside,CA,92057,760-721-3737,https://www.loveboatsushi.com
+4104,Coin-Op Game Room (North Park),3926 30th Street,San Diego,CA,92104,818-448-0129,https://www.coinopsd.com
+1903,Saffron Thai LLC,3731 India St,San Diego,CA,92103,619-574-7737,https://www.saffronsandiego.com/
+5517,Herb & Wood Bar,2210 Kettner Blvd,San Diego,CA,92101,619-955-8495,https://www.herbandwood.com
+209,Jake's Del Mar,1660 Coast Blvd,Del Mar,CA,92014,858-755-2002,https://www.jakesdelmar.com/
+5570,Brigantine Coronado Bar,1333 Orange Ave,Coronado,CA,92118,619-435-4166,https://brigantine.com/locations_brigcor.html
+2985,Olivewood Gardens and Learning Center,2525 N Ave,National City,CA,91950,619-434-4281,https://olivewoodgardens.org/
+5381,Claudia's Cocina,283 Eucalyptus Ct,Chula Vista,CA,91910,855-444-3732,https://www.chefclaudiascocina.com/
+2142,"Milton's Delicatessen, Grill & Bakery",2660 Via De La Valle,Del Mar,CA,92014,858-792-2225,https://www.miltonsdeli.com/
+4596,Kettner Exchange Bar,2001 Kettner Boulevard,San Diego,CA,92101,909-915-9877,https://www.kettnerexchange.com/
+2847,Tin Leaf Fresh Kitchen,6985 El Camino Real,Carlsbad,CA,92011,760-431-5323,https://tinleafkitchen.com
+895,Terra Restaurant,7091 El Cajon Blvd,San Diego,CA,92115,619-293-7088,https://www.terrasd.com
+5026,Rustic Root,535 5th Avenue,San Diego,CA,92101,619-232-1747,https://www.rusticroot.com/
+5025,Holsem Coffee,2911 University Avenue,San Diego,CA,92104,619-295-3172,https://www.holsemcoffee.com/
+2048,Alexander's on 30th,3391 30th St,San Diego,CA,92104,858-774-3062,https://www.alexanderson30th.com
+8258,PureFish, ,San Diego, , ,,https://www.purefishchef.com
+884,Chef Drew Mc Partlin,415 W Nutmeg St,San Diego,CA,92103,619-990-9201,https://www.chefdrewmcpartlin.com/
+3759,Belmont Park Entertainment,3125 Ocean Front Walk,San Diego,CA,92109,858-228-9283,https://www.belmontpark.com/
+3619,Monello (Bar),750 West Fir Street,San Diego,CA,92101,619-822-5493,https://www.lovemonello.com/
+4488,Beach Plum Kitchen,6971 El Camino Real,Carlsbad,CA,92009,760-688-8682,https://beachplumkitchen.com/
+2149,Solare Ristorante Lounge,2820 Roosevelt Rd,San Diego,CA,92106,619-270-9670,https://www.solarelounge.com/
+2353,Turf Supper Club,1116 25th St,San Diego,CA,92102,619-234-6363,https://www.turfsupperclub.com/tc/home.html
+9100,Westin Gaslamp Quarter,910 Broadway Circle,San Diego,CA,92101,619-239-2200,https://www.starwoodhotels.com/westin/property/dining/index.html?propertyID=1009
+9740,Kitchens for Good - Culinary Program,2799 Health Center Dr,San Diego,CA,92123,619-450-4040,https://www.jacobscenter.org
+2252,San Diego Humane Society,,San Diego,CA,,619-299-7012,https://www.sdhumane.org
+1415,Village Pizzeria,1206 Orange Ave,Coronado,CA,92118,619-522-6890,https://www.nadolife.com/villagepizzeria/index.html
+552,Lauberge Del Mar,1540 Camino Del Mar,Del Mar,CA,92014,858-259-1515,https://www.laubergedelmar.com/dining_index.htm
+5277,Bistro du Marche by Tapenade,7437 Girard Ave,La Jolla,CA,92037,858-551-7500,https://www.bistrodumarche.net/
+9055,Lafayette Hotel - Pool (Bar),2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+9053,Lafayette Hotel - Lobby (Bar),2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+4963,Duke's La Jolla,1216 Prospect Street,La Jolla,CA,92037,858-454-1999,https://www.dukeslajolla.com/
+3692,Great Maple Hillcrest,1451 Washington Street,San Diego,CA,92103,619-255-2282,https://thegreatmaple.com/
+4040,Home Kitchen Culture,3245 University Avenue,San Diego,CA,92104,619-302-7655,https://www.homekitchenculture.com/
+3338,Rubicon Deli India Street,3715 India St,San Diego,CA,92103,619-200-4201,https://www.therubicondeli.com/
+4531,Lofty Cafe-Roasting Works,97 North Coast Highway 101,Encinitas,CA,92024,,https://loftycoffee.com/
+4174,Kettner Exchange,2001 Kettner Boulevard,San Diego,CA,92101,909-915-9877,https://www.kettnerexchange.com/
+2866,Ghirardelli Downtown,643 5th Ave,San Diego,CA,92101,619-234-2449,https://www.ghirardelli.com/
+2688,Bencotto Italian Kitchen,750 W Fir St,San Diego,CA,92101,619-822-5493,https://lovebencotto.com/
+3020,Ki's Kitchen Commissary,2530 PIONEER AVE,VISTA,CA,92081,760-777-0700,https://kis-kitchen.com
+5477,Red O Restaurant,4340 La Jolla Village Dr,San Diego,CA,92122,858-291-8360,https://redorestaurant.com
+1376,Market Restaurant and Grill,3702 Via De La Valle #101,Del Mar,CA,92014,858-523-0007,https://www.marketdelmar.com/
+9563,Viejas Casino Pit Stop,5000 Willows Rd,Alpine,CA,91901,619-659-1774,https://www.viejas.com/
+2386,Blind Lady,3416 Adams Ave,San Diego,CA,92116,619-381-4475,https://www.blindladyalehouse.com/
+3907,The Office,3936 30th Street,San Diego,CA,92104,619-450-6632,https://www.theofficebarsd.com/
+8653,Monarch School (Nutrition Lab),1625 Newton Ave,San Diego,CA,92113,619-804-1766,https://www.monarchschools.org
+2824,Urbn Pizza Kitchen,3085 University Avenue,San Diego,CA,92104,619-255-7300,https://www.urbnnorthpark.com/
+2752,Miho,4696 Ruffner St.,San Diego,CA,92111,619-365-5655,https://www.mihogastrotruck.com/
+4630,Rabbit Hole,3377 Adams Avenue,San Diego,CA,92116,619-255-4653,https://rabbitholesd.com/
+9083,Lafayette Hotel - In Room,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+5386,619 Spirits,3015 Lincoln Avenue,San Diego,CA,92104,509-701-9534,https://619Vodka.com
+4722,Word of Mouth Kitchen,931 W Hawthorn St.,San Diego,CA,92101,858-705-3752,https://www.wrdofmouthkitchen.com/
+36,Harry's Coffee Shop,7545 Girard Ave,San Diego,CA,92037,858-454-7381,https://www.harryscoffeeshop.com/
+755,Poseidon on the Beach,1670 Coast Blvd,Del Mar,CA,92014,858-755-9345,https://www.poseidonrestaurant.com/
+2783,Le Papagayo (Encinitas),1002 N Coast Highway 101,Encinitas,CA,92024,760-944-8252,https://www.lepapagayoleucadia.com/
+3405,Isola Pizza Bar,1526 India St,San Diego,CA,92101,619-564-2938,https://isolapizzabar.com/
+332,Marine Room,2000 Spindrift Dr,San Diego,CA,92037,858-551-4676,https://www.marineroom.com/
+4642,Sugar Bear Enterprises,4738 University Ave,San Diego,CA,92105,925-383-3623,https://www.chefjoann.com
+5047,Park & Rec,4612 Park Boulevard,San Diego,CA,92116,619-717-3925,https://parkandrecsd.com/
+3229,Carolines Seaside Cafe,8610 Kennel Way,La Jolla,CA,92037,619-646-1481,https://carolinesseasidecafe.com/
+4378,Churchill's Pub and Grille,887 West San Marcos Boulevard,San Marcos,CA,92078,760-471-8773,https://www.churchillspub.us
+3482,Hillcrest Brewery,1458 University Ave,San Diego,CA,92103,619-269-4323,https://www.mosuniverse.com/
+3416,Four Seasons Residence Club,7210 Blue Heron Pl,Carlsbad,CA,92011,760-603-6360,https://www.fourseasons.com
+4809,On the Crawl Concepts-Inland Tavern,1001 West San Marcos Boulevard,San Marcos,CA,92078,760-744-8782,https://www.inlandtavern.com
+8710,University Club (Bar),750 B St,San Diego,CA,92101,619-234-5200,https://www.clubcorp.com/club/scripts/section/section.asp?NS=PCH&MFCODE=UCAST
+2987,Fish 101,1468 N Coast Hwy 101,Encinitas,CA,92024,760-943-6221,https://www.fish101restaurant.com/
+8340,Roppongi (La Jolla),875 Prospect St,La Jolla,CA,92037,619-631-4949,https://www.roppongiusa.com/
+3402,Embassy Suites Downtown,601 Pacific Hwy,San Diego,CA,92101,619-481-9349,https://embassysuites1.hilton.com/en_US/es/hotel/SANDNES-Embassy-Suites-San-Diego-Bay-Downtown-California/index.do
+2160,Village Pizzeria Bay Side,1201 1st St #6,Coronado,CA,92118,619-522-6890,https://www.nadolife.com/villagepizzeria/index.html
+1688,Cliffhanger Cafe Menu,2800 Torrey Pines Scenic Dr,San Diego,CA,92037,858-452-9858,https://cliffhangercafe.net/
+4009,Donut Bar,401 W A St. Unit 130,San Diego,CA,92101,310-488-5667,https://donutbarsandiego.com
+9775,The Lion Share,629 Kettner Blvd,San Diego,CA,92101,619-564-6924,https://www.lionssharesd.com/
+459,Mister A's,2550 5th Ave #111,San Diego,CA,92103,619-239-1377,https://www.asrestaurant.com/
+4370,"Yoann Taboyan, Personal Chef",677 7th Avenue,San Diego,CA,92101,347-277-1958,https://www.yoanntaboyan.com
+5259,Trust Restaurant,3752 Park Blvd,San Diego,CA,92103,609-780-7572,https://www.trustrestaurantsd.com/
+3559,The Duck Dive - Bar,4650 Mission Blvd,San Diego,CA,92109,858-273-3825,https://www.theduckdive.com/welcome-to-the-duck-dive/
+5135,Nishiki Ramen,8055 Armour Street,San Diego,CA,92111,858-987-0222,https://www.nishikiramen.com/
+9011,Lafayette Hotel - Mississippi Kitchen,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+229,Hornblower Cruises,2825 Fifth Ave.,San Diego,CA,92103,619-686-8733,https://www.hornblower.com/
+9245,Viejas Casino Central Kitchen,5000 Willows Rd,Alpine,CA,91901,619-659-1774,https://www.viejas.com/
+5027,Rustic Root (Bar),535 5th Avenue,San Diego,CA,92101,619-702-5595,https://www.rusticroot.com/
+1274,Crest Cafe,425 Robinson Ave,San Diego,CA,92103,619-295-2510,https://www.crestcafe.net/
+1064,La Costa Resort & Spa Bob's Steak House,2100 Costa Del Mar Rd,Carlsbad,CA,92009,760-930-7063,https://www.dinebluefire.com/
+2089,Cowboy Star,640 10th Ave,San Diego,CA,92101,619-450-5880,https://www.thecowboystar.com/
+4329,Shorehouse Kitchen,2236 Avenida De La Playa,La Jolla,CA,92037,858-459-3300,https://www.shorehousekitchen.com
+9052,Lafayette Hotel - The Gutter,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+2915,Warren Walker School Mission Valley,4605 Point Loma Ave,San Diego,CA,92107,619-223-3663,https://www.warren-walker.com/
+274,Fishery,5040 Cass St,San Diego,CA,92109,858-272-9985,https://www.pacshell.com/
+9801,Cliffhanger Cafe Bar,2800 Torrey Pines Scenic Dr,La Jolla,CA,92037,858-452-9858,https://cliffhangercafe.net/
+1469,US Grant In Room Service,326 Broadway,San Diego,CA,92101,619-232-3151,https://www.usgrant.net/index.html
+5122,Town & Country Arlo,500 Hotel Circle North,San Diego,CA,92108,619-291-7131,https://www.towncountry.com/
+4237,Blue Ocean (Carlsbad),2958 Madison Street,Carlsbad,CA,92008,760-434-4959,https://www.facebook.com/BlueOceanSD
+8823,Miguel's Cocina Coronado Bar,1351 Orange Ave,Coronado,CA,92118,619-437-4237,https://www.brigantine.com/locations_migcor.html
+4433,Local Tap House & Kitchen,308 South Coast Highway,Oceanside,CA,92054,760-547-1469,https://localtaphouse.com/
+3407,Nutmeg Bakery & Cafe 1,12640 Sabre Springs Pkwy,San Diego,CA,92128,858-405-2401,https://www.nutmegsd.com/
+4116,Green Dragon Tavern & Museum,6115 Paseo Del Norte,Carlsbad,CA,92011,760-797-5579,https://www.greendragontavernca.com
+1348,Giuseppe Restaurants & Fine Catering,4901 Morena Blvd,San Diego,CA,92117,619-436-7006,https://www.giuseppecatering.com/
+1365,Mission Bay Yacht Club,1215 El Carmel Place,San Diego,CA,92109,858-488-0501,https://www.mbyc.org/
+8566,Stone Brewing-Liberty Station Bar,2816 Historic Decatur Rd,San Diego,CA,92106,619-269-2100,https://www.stonelibertystation.com/
+2709,Noble Experiment,777 G St,San Diego,CA,92101,619-446-0002,https://nobleexperimentsd.com/
+2686,Shimbashi Izakaya,1555 Camino Del Mar,Del Mar,CA,92014,858-523-0479,https://www.shimbashi-restaurants.com/index.php
+2621,Counterpoint,830 25th St,San Diego,CA,92102,619-564-6722,https://www.facebook.com/pages/Counterpoint-San-Diego/196990804809
+3186,College Cuisine - Kappa Delta,5066 College Ave,San Diego,CA,92115,510-512-2213,https://greeklife.sdsu.edu/
+1943,Sheraton Harbor Island,1380 Harbor Island Drive,San Diego,CA,92101,619-692-2265,https://www.starwoodhotels.com/sheraton/property/dining/index.html?propertyID=127
+556,La Jolla Beach & Tennis Club,2000 Spindrift Dr,San Diego,CA,92037,619-816-8319,https://www.ljbtc.com/
+5597,GoodOnYa,1051 S Coast Hwy 101,Encinitas,CA,92024,949-295-3145,https://www.goodonyaorganic.com
+3440,Sushi Kami,11611 Rancho Bernardo Rd,San Diego,CA,92127,858-451-7799,https://www.loveboatsushi.com
+4775,Nomad Donuts,3102 university ave,San Diego,CA,92116,619-431-5000,https://www.nomaddonuts.com
+4578,Mission Ave Bar and Grill,711 Mission Avenue,Oceanside,CA,92054,760-637-2222,https://www.missionavebarandgrill.com/
+9287,Georges at the Cove Pick Ups,1250 Prospect St,La Jolla,CA,92037,858-454-4244,https://www.georgesatthecove.com
+1576,Maderas Golf Club,17750 Old Coach Rd,Poway,CA,92064,858-451-8100,https://www.maderasgolf.com
+3356,Mille Fleurs,6009 Paseo Delicias,Rancho Santa Fe,CA,92067,858-756-3085,https://www.millefleurs.com/
+314,Brigantine Escondido,421 W Felicita Ave,Escondido,CA,92025,760-743-4718,https://brigantine.com/locations_brigesc.html
+4842,Pacific Terrace Hotel,610 Diamond Street,San Diego,CA,92109,858-581-3500,https://www.pacificterrace.com/
+8549,Nishiki Ramen - Mira Mesa,9460 Mira Mesa Blvd e,San Diego,CA,92126,808-561-1090,https://www.nishikiramen.com/
+1887,The Pearl Hotel,1410 Rosecrans St,San Diego,CA,92106,877-732-7573,https://www.thepearlsd.com/dine/
+4342,Olive Tree Marketplace,4805 Narragansett Avenue,San Diego,CA,92107,619-224-0443,https://www.olivetreemarket.com/
+330,Nine - Ten,910 Prospect St,San Diego,CA,92037,858-964-5400,https://www.nine-ten.com
+3153,Rust General Store,2720 Calhoun St,San Diego,CA,92110,619-295-7878,https://www.rustgeneral.com/
+2471,Nobu,207 5th Ave,San Diego,CA,92101,619-814-4124,https://www.noburestaurants.com
+4341,Ulivo,1776 Sunset Cliffs Boulevard,San Diego,CA,92107,619-962-7345,https://espressocucina.com/PDFs/Main_Menu.pdf
+1152,Fleming's Steakhouse Downtown,380 K St,San Diego,CA,92101,619-237-1155,https://www.flemingssteakhouse.com
+4320,Juniper & Ivy Bar,2228 Kettner Blvd,San Diego,CA,92101,858-481-3666,https://www.juniperandivy.com
+9348,Rancho Bernardo Inn (Veranda),17550 Bernardo Oaks Dr,San Diego,CA,92128,877-517-9340,https://www.ranchobernardoinn.com
+9074,Lafayette Hotel - (Front) Beginners Diner,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+1944,La Costa Resort & Spa Vue,2100 Costa Del Mar Rd,Carlsbad,CA,92009,760-930-7063,https://www.lacosta.com/dining/legends.asp
+3023,Harvest Kitchen,1495 Poinsettia Ave.,Vista,CA,92081,619-709-0938,https://www.harvestkitchen.com/
+3647,Nadolife Production,1705 National Ave,San Diego,CA,92113,619-239-1224,https://bluebridgehospitality.com/
+4279,Carolines Seaside Cafe Bar,8610 Kennel Way,La Jolla,CA,92037,858-202-0569,https://carolinesseasidecafe.com/
+8979,Lafayette Hotel - Quixote,2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+9719,University Club (Knead Bakery),750 B St,San Diego,CA,92101,619-234-5200,https://www.clubcorp.com/club/scripts/section/section.asp?NS=PCH&MFCODE=UCAST
+2454,Rancho Bernardo Inn,17550 Bernardo Oaks Dr,San Diego,CA,92128,877-517-9340,https://www.ranchobernardoinn.com
+370,Catamaran,3999 Mission Blvd,San Diego,CA,92109,858-488-1081,https://www.catamaranhotel.com
+2536,Venissimo Cheese Del Mar,2650 Via De La Valle,Del Mar,CA,92014,858-847-9616,https://www.venissimo.com/store/
+3118,Kensington Cafe,4141 Adams Ave,San Diego,CA,92116,619-684-0044,https://kensingtoncafesd.com/
+3147,We Olive La Jolla,1158 Prospect St,San Diego,CA,92037,858-551-8250,https://lajolla.weolive.com/
+4965,Homegrown Meats,7660 Fay Avenue,La Jolla,CA,92037,858-454-6328,https://www.homegrownmeats.com
+5048,Aztec Shop Catering,5500 Azetec Circle Dr.,San Diego,CA,92182,619-594-3576,https://www.sdsucatering.com/
+2912,KI's,2591 S Coast Highway 101,Encinitas,CA,92007,760-586-8289,https://www.kisrestaurant.com/
+3372,Barleymash,600 5th Ave,San Diego,CA,92101,619-255-7373,https://www.barleymash.com/
+2472,Pier 32 Water Front Grill,3201 Marina Way #102,National City,CA,91950,619-718-6240,https://www.mywaterfrontgrill.com/
+5406,Sugar and Scribe,7660 Fay Ave,La Jolla,CA,92037,858-274-1733,https://www.sugarandscribe.com
+2286,Toast Catering,2320 Truxtun Rd,San Diego,CA,92106,619-795-9135,https://www.toastcatering.com/
+2601,Sadie Rose Bakery,2614 Temple Heights Dr,Oceanside,CA,92056,619-718-9532,https://www.sadierose.com/
+4319,Belmont Park Cannonball,3125 Ocean Front Walk,San Diego,CA,92109,858-228-9283,https://www.belmontpark.com/restaurants/cannonball/
+9179,Le Parfait Paris - Fashion Valley,7007 Friars Rd #862,San Diego,CA,92108,619-245-4457,https://www.leparfaitparis.com
+27,Bridges at Rancho Santa Fe,18550 7 Bridges Rd,Rancho Santa Fe,CA,92091,858-759-6063,https://www.thebridgesrsf.com/
+2785,UCSD Food & Nutrition Department La Jolla,9300 Campus Point Dr,San Diego,CA,92037,858-761-1269,https://health.ucsd.edu/patients/yourhospitalstay/Pages/food-services.aspx
+8767,Smoking Gun (Pastry),555 Market St,San Diego,CA,92101,619-276-6700,https://www.thesmokinggunsd.com/
+4491,Shakespeare's Corner Shoppe & Afternoon Tea,3719 India Street,San Diego,CA,92103,619-683-2748,https://www.sandiegoafternoontea.com
+4260,Le Parfait Paris,3555 India St,San Diego,CA,92103,619-245-4457,https://www.leparfaitparis.com
+8669,Common Theory (Bar),4805 Convoy St,San Diego,CA,92111,858-384-7974,https://www.commontheorysd.com/
+473,Hash House A Go Go,3628 5th Ave,San Diego,CA,92103,951-764-0605,https://www.hashhouseagogo.com/
+179,Cody's La Jolla,1025 Prospect St.,La Jolla,CA,92037,858-459-0040,https://www.codyslajolla.com
+316,Brigantine La Mesa,9350 Fuerte Dr,La Mesa,CA,91941,619-465-1935,https://brigantine.com/locations_briglm.html
+3141,The Tavern,1310 Orange Ave,Coronado,CA,92118,602-628-5890,https://coronadotavern.com/
+1092,JRDN Restaurant,723 Felspar St,San Diego,CA,92109,858-270-5736,https://www.jrdn.com/serving/up/flash/
+3951,Prager Brothers Artisan Bread,5611 Palmer Way,Carlsbad,CA,92010,760-445-9536,https://www.pragerbrothers.com
+9054,Lafayette Hotel - Lobby (Cafe),2223 El Cajon Blvd,San Diego,CA,92104,619-296-2101,https://www.lafayettehotelsd.com/
+2110,Catering By Felicia G.,8625 La Jolla Scenic Dr N,San Diego,CA,92037,619-742-4747,https://cateringbyfeliciag.com/
+5516,Four Seasons Foods Catering,1822 Clove St,San Diego,CA,92106,619-876-6986,https://www.fourseasonsfoodcatering.com
+3487,Hotel Palomar- Salt Box Bar,1047 5th Ave,San Diego,CA,92101,619-515-4062,https://saltboxrestaurant.com
+2062,The Crossings,5800 The Crossings Dr,Carlsbad,CA,92008,760-444-1800,https://www.cybergolf.com/kemper/courses/layout10.asp?id=182&page=4073
+2250,Azuki Sushi Lounge,2321 5th Ave,San Diego,CA,92101,619-238-4760,https://www.azukisushi.com/
+2690,Mitch's Seafood,1403 Scott St,San Diego,CA,92106,619-316-7314,https://mitchsseafood.com/
+2655,UCSD Food & Nutrition Department Hillcrest,201 W Arbor Dr,San Diego,CA,92103,619-380-9840,https://health.ucsd.edu/specialties/nutrition/Pages/default.aspx
+564,Lodge at Torrey Pines Main,11480 N Torrey Pines Rd,San Diego,CA,92037,858-453-4420,https://www.arvalentien.com/
+5239,Carnitas Snack Shack Harbor Dr.,1004 North Harbor Drive,San Diego,CA,92101,619-295-3173,https://carnitassnackshack.com/
+3548,Piatti Bar,2182 Avenida De La Playa,San Diego,CA,92037,858-454-1589,https://www.piatti.com/
+9119,Revolution Roasters (Carlsbad),2956 Roosevelt St,Carlsbad,CA,92008,760-330-6827,https://revoroasters.com
+3242,Under Belly-Little Italy Kitchen,750 W Fir St,San Diego,CA,92101,619-269-4626,https://www.godblessunderbelly.com/
+4874,Red Tail Catering,960 Ranchers Dr Ste A,San Marcos,CA,92069,858-605-8219,https://www.redtailcatering.com/
+4103,The Pearl Hotel Bar,1410 Rosecrans St,San Diego,CA,92106,877-732-7573,https://www.thepearlsd.com/dine/
+2678,The Smoking Goat,3408 30th St,San Diego,CA,92104,858-232-4220,https://www.thesmokinggoatrestaurant.com/
+541,Noble House Hotels & Resorts,1775 East Mission Bay Drive,San Diego,CA,92109,619-276-4010,https://www.hilton.com/en_US/hi/hotel/SANHIHF-Hilton-San-Diego-Resort-California/index.do
+3105,La Costa Wine Co.,7750 El Camino Real,Carlsbad,CA,92009,760-431-8455,https://lacostawineco.com
+646,Marriott Courtyard - Broadway,530 Broadway,San Diego,CA,92101,619-446-3008,https://www.marriott.com/hotels/travel/sancd-courtyard-san-diego-downtown/
+4583,Stake Chophouse & Bar,1309 Orange Avenue,Coronado,CA,92118,619-522-0077,https://www.stakechophouse.com/
+4689,Lodge at Torrey Pines B&W,11480 N Torrey Pines Rd,San Diego,CA,92037,858-453-4420,https://www.lodgetorreypines.com/
+5332,Viejas Casino Grove Steakhouse,5000 Willows Rd,Alpine,CA,91901,800-295-3172,https://viejas.com/dining/steakhouse-san-diego
+317,Brigantine Poway,13445 Poway Rd,Poway,CA,92064,858-486-3066,https://brigantine.com/locations_brigpow.html
+417,Third Corner Ocean Beach,2265 Bacon St,San Diego,CA,92107,619-223-2700,https://www.the3rdcorner.com
+59,Hilton Harbor Island,1960 Harbor Island Dr,San Diego,CA,92101,619-291-6700,https://www.hilton.com/hotels/SANAHHF/index.html
+6198,La Bonne Table, ,San Diego,CA, ,619-887-7706,https://www.facebook.com/labonnetablesd/
+5607,Campfire,2725 State St,Carlsbad,CA,92008,760-637-5121,https://thisiscampfire.com
+872,C 2 C,600 Convention Way,San Diego,CA,92101,619-972-9345,https://www.c2conline.com
+2711,Residence Inn Downtown Gaslamp,356 6th Ave,San Diego,CA,92101,619-487-1200,https://www.marriott.com/hotels/travel/sanrg-residence-inn-san-diego-downtown-gaslamp-quarter/
+3211,The Promiscuous Fork-La Jolla Blvd,6984 La Jolla Blvd,La Jolla,CA,92037,858-776-3246,https://thepromiscuousfork.com/
+4723,"Saint Mark Golf and Resort, LLC",1750 San Pablo Dr.,San Marcos,CA,92078,508-320-6644,https://www.stmarkgolf.com/
+2486,Syrah Spirit & Wine Parlor,901 5th Ave,San Diego,CA,92101,619-234-4166,https://syrahwineparlor.com/
