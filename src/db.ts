@@ -159,6 +159,32 @@ interface RestaurantWithEnrichment extends Restaurant {
 	newsletter_url: string | null;
 }
 
+interface RestaurantQueueRow {
+	id: string;
+	name: string;
+	website_url: string | null;
+	newsletter_provider: string | null;
+	newsletter_form_html: string | null;
+}
+
+export async function getRestaurantsQueue(
+	db: D1Database
+): Promise<RestaurantQueueRow[]> {
+	const { results } = await db
+		.prepare(
+			`SELECT r.id, r.name, r.website_url,
+					e.newsletter_provider, e.newsletter_form_html
+			 FROM restaurants r
+			 LEFT JOIN restaurant_enrichment e ON r.id = e.restaurant_id
+			 ORDER BY
+				CASE WHEN e.newsletter_provider IS NOT NULL THEN 0 ELSE 1 END,
+				CASE WHEN e.newsletter_form_html IS NOT NULL THEN 0 ELSE 1 END,
+				r.name ASC`
+		)
+		.all<RestaurantQueueRow>();
+	return results;
+}
+
 export async function getRestaurantsWithEnrichment(
 	db: D1Database
 ): Promise<RestaurantWithEnrichment[]> {

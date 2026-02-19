@@ -1,6 +1,6 @@
 import type { SubscribeItem } from './types';
 import { json, safeAsync } from './utils';
-import { initSchema, importRestaurants, getRestaurantsToEnrich, getRestaurantsWithEnrichment } from './db';
+import { initSchema, importRestaurants, getRestaurantsToEnrich, getRestaurantsWithEnrichment, getRestaurantsQueue } from './db';
 import { enrichRestaurant } from './enrich';
 import { detectNewsletterProvider } from './providers';
 import { handleSubscribeBatch } from './subscribe';
@@ -19,6 +19,43 @@ export default {
 		// GET /health — simple health check
 		if (url.pathname === '/health') {
 			return json({ status: 'ok' });
+		}
+
+		// CORS preflight for /admin/queue
+		if (request.method === 'OPTIONS' && url.pathname === '/admin/queue') {
+			return new Response(null, {
+				status: 204,
+				headers: {
+					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Methods': 'GET, OPTIONS',
+					'Access-Control-Allow-Headers': 'Content-Type',
+				},
+			});
+		}
+
+		// GET /admin/queue — list all restaurants with enrichment status
+		if (request.method === 'GET' && url.pathname === '/admin/queue') {
+			const [rows, queryErr] = await safeAsync(() => getRestaurantsQueue(env.DB));
+			if (queryErr) {
+				return json({ error: queryErr.message }, 500);
+			}
+
+			const restaurants = (rows ?? []).map((r) => ({
+				id: r.id,
+				name: r.name,
+				website_url: r.website_url,
+				newsletter_provider: r.newsletter_provider,
+				newsletter_form_html: r.newsletter_form_html,
+				has_form: r.newsletter_form_html != null,
+			}));
+
+			const body = JSON.stringify({ restaurants }, null, 2);
+			return new Response(body, {
+				headers: {
+					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*',
+				},
+			});
 		}
 
 		// GET /api/debug-detect — temporary diagnostic: fetch a URL and run detection
@@ -192,7 +229,7 @@ export default {
 
 		return json({
 			status: 'ok',
-			endpoints: ['/health', '/api/debug-detect', '/api/import', '/api/enrich', '/api/subscribe'],
+			endpoints: ['/health', '/admin/queue', '/api/debug-detect', '/api/import', '/api/enrich', '/api/subscribe'],
 		});
 	},
 } satisfies ExportedHandler<AppEnv>;
