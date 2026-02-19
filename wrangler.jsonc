@@ -12,6 +12,17 @@
 	},
 	"compatibility_flags": [
 		"nodejs_compat"
+	],
+	/**
+	 * D1 Database
+	 * https://developers.cloudflare.com/d1/
+	 */
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "restaurant-scene-db",
+			"database_id": "PLACEHOLDER_ID"
+		}
 	]
 	/**
 	 * Smart Placement
